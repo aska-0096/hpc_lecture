@@ -89,9 +89,14 @@ int main() {
       fxi = _mm256_fmadd_ps(dx, mj, fxi);
       fyi = _mm256_fmadd_ps(dy, mj, fyi);
     }
+<<<<<<< HEAD
     _mm256_store_ps(fx, fxi);
     _mm256_store_ps(fy, fyi);
 >>>>>>> ebc183ec04fbd943b6eda12f4665b266c3a700da
+=======
+    _mm256_store_ps(fx+i, fxi);
+    _mm256_store_ps(fy+i, fyi);
+>>>>>>> be9f4a10df2ab685115519227924febf000139fd
   }
   for(int i=0; i<N; i++)
     printf("%d %g %g\n",i,fx[i],fy[i]);
